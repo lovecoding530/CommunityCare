@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityCare.OrderDetailPage"
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+    		 xmlns:i18n="clr-namespace:CommunityCare;assembly=CommunityCare"
+             Title="{i18n:Translate Order_Detail}">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>20</OnPlatform.iOS>
+            <OnPlatform.Android>20</OnPlatform.Android>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{i18n:Translate Payment_Type}" FontSize="Medium"/>
+                <Label Text="Paypal" x:Name="paymentTypeLabel" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal">
+                <Label Text="{i18n:Translate Date_Time}" FontSize="Medium"/>
+                <Label Text="Paypal" x:Name="dateTimeLabel" FontSize="Medium"/>
+            </StackLayout>
+            <maps:Map
+                x:Name="map"
+                HeightRequest="200" 
+            />
+            <StackLayout BackgroundColor="#eeeeee" VerticalOptions="FillAndExpand">
+                <ListView x:Name="testsListView" RowHeight="64">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand" Padding="10, 0">
+                                    <Label Text="{Binding Name}" FontSize="Large" />
+                                    <Label Text="{Binding Path=Price, StringFormat='Price: {0}'}" TextColor="DarkGray" FontSize="Medium" />
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

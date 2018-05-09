@@ -1,0 +1,59 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:img="clr-namespace:ImageButton.Abstractions;assembly=ImageButton.Abstractions"
+             x:Class="CommunityCare.ManualLabTest"
+    		 xmlns:i18n="clr-namespace:CommunityCare;assembly=CommunityCare"
+             Title="{i18n:Translate Create_an_Order}">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>20</OnPlatform.iOS>
+            <OnPlatform.Android>20</OnPlatform.Android>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand">
+                <Picker Title="{i18n:Translate Select_a_Lab_Test}" x:Name="labTestPicker" HorizontalOptions="FillAndExpand"/>
+                <img:ImageButton 
+                    Source="add"
+                    VerticalOptions="Center"
+                    HorizontalOptions="End"
+                    SelectedChanged="OnClickedAdd"
+                    WidthRequest="36"
+                    HeightRequest="36"/>
+            </StackLayout>
+            <StackLayout BackgroundColor="#eeeeee">
+                <ListView x:Name="testsListView" RowHeight="80">
+                    <ListView.ItemTemplate>
+                        <DataTemplate>
+                            <ViewCell>
+                                <StackLayout Orientation="Horizontal" HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Padding="10">
+                                    <StackLayout Orientation="Vertical" VerticalOptions="CenterAndExpand">
+                                        <Label Text="{Binding Name}" FontSize="Large" />
+                                        <Label Text="{Binding Path=Price, StringFormat='Price: {0}'}" TextColor="DarkGray" FontSize="Medium" />
+                                    </StackLayout>
+
+                                    <img:ImageButton 
+                                            Source="trash"
+                                            VerticalOptions="Center"
+                                            HorizontalOptions="EndAndExpand"
+                                            SelectedChanged="OnClickedDelete"
+                                            BindingContext="{Binding .}"
+                                            WidthRequest="36"
+                                            HeightRequest="36"/>
+
+                                </StackLayout>
+                            </ViewCell>
+                        </DataTemplate>
+                    </ListView.ItemTemplate>
+                </ListView>
+                <Label Text="Total: $20" x:Name="totalLabel" FontSize="Medium"/>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                <Button Text="{i18n:Translate Confirm}" Clicked="OnClickedConfirm" HorizontalOptions="FillAndExpand"/>
+                <Button Text="{i18n:Translate Cancel}" Clicked="OnClickedCancel" HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

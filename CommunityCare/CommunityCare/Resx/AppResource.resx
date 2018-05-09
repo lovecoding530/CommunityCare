@@ -1,0 +1,330 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="Agreement" xml:space="preserve">
+    <value>Agreement</value>
+  </data>
+  <data name="Aleady_Added" xml:space="preserve">
+    <value>Aleady Added</value>
+  </data>
+  <data name="Are_you_sure_to_cancel_the_Lab_Test" xml:space="preserve">
+    <value>Are you sure to cancel the Lab Test?</value>
+  </data>
+  <data name="Cancel" xml:space="preserve">
+    <value>Cancel</value>
+  </data>
+  <data name="Change_Password" xml:space="preserve">
+    <value>Change Password</value>
+  </data>
+  <data name="CommCare" xml:space="preserve">
+    <value>CommCare</value>
+  </data>
+  <data name="Confirm" xml:space="preserve">
+    <value>Confirm</value>
+  </data>
+  <data name="Confirm_and_Schedual_Pickup" xml:space="preserve">
+    <value>Confirm and Schedual Pickup</value>
+  </data>
+  <data name="Confirm_Password" xml:space="preserve">
+    <value>Confirm Password</value>
+  </data>
+  <data name="Contact_Us" xml:space="preserve">
+    <value>Contact Us</value>
+  </data>
+  <data name="Create_an_Order" xml:space="preserve">
+    <value>Create an Order</value>
+  </data>
+  <data name="Date_Time" xml:space="preserve">
+    <value>Date Time:</value>
+  </data>
+  <data name="Edit_Lab_Test_Time_and_Location" xml:space="preserve">
+    <value>Edit Lab Test Time and Location</value>
+  </data>
+  <data name="Email" xml:space="preserve">
+    <value>Email</value>
+  </data>
+  <data name="Email_Address" xml:space="preserve">
+    <value>Email Address</value>
+  </data>
+  <data name="Enter_correctly" xml:space="preserve">
+    <value>Enter correctly.</value>
+  </data>
+  <data name="Enter_email_address" xml:space="preserve">
+    <value>Enter email address</value>
+  </data>
+  <data name="Finish" xml:space="preserve">
+    <value>Finish</value>
+  </data>
+  <data name="Forgot_Password" xml:space="preserve">
+    <value>Forgot Password</value>
+  </data>
+  <data name="Getting_info" xml:space="preserve">
+    <value>Getting info...</value>
+  </data>
+  <data name="Getting_tests" xml:space="preserve">
+    <value>Getting tests</value>
+  </data>
+  <data name="History" xml:space="preserve">
+    <value>History</value>
+  </data>
+  <data name="History_of_Your_Lab_Tests" xml:space="preserve">
+    <value>History of your Lab Tests</value>
+  </data>
+  <data name="History_of_Your_Orders" xml:space="preserve">
+    <value>History of Your Orders</value>
+  </data>
+  <data name="History_of_Your_Surveys" xml:space="preserve">
+    <value>History of your Surveys</value>
+  </data>
+  <data name="Login" xml:space="preserve">
+    <value>Login</value>
+  </data>
+  <data name="Main_Survey" xml:space="preserve">
+    <value>Main Survey</value>
+  </data>
+  <data name="New_Lab_Test" xml:space="preserve">
+    <value>New Lab Test</value>
+  </data>
+  <data name="New_Password" xml:space="preserve">
+    <value>New Password</value>
+  </data>
+  <data name="New_User_Sign_up" xml:space="preserve">
+    <value>New User Sign up</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="OK" xml:space="preserve">
+    <value>OK</value>
+  </data>
+  <data name="Order_Detail" xml:space="preserve">
+    <value>Order Detail</value>
+  </data>
+  <data name="Orders" xml:space="preserve">
+    <value>Orders</value>
+  </data>
+  <data name="Password" xml:space="preserve">
+    <value>Password</value>
+  </data>
+  <data name="Payment_Method" xml:space="preserve">
+    <value>Payment Method</value>
+  </data>
+  <data name="Payment_Type" xml:space="preserve">
+    <value>Payment Type:</value>
+  </data>
+  <data name="Paypal" xml:space="preserve">
+    <value>Paypal</value>
+  </data>
+  <data name="Pin_Number" xml:space="preserve">
+    <value>Pin Number</value>
+  </data>
+  <data name="Please_add_a_lab_test" xml:space="preserve">
+    <value>Please add a lab test</value>
+  </data>
+  <data name="Please_select_a_payment_type" xml:space="preserve">
+    <value>Please select a payment type</value>
+  </data>
+  <data name="Question" xml:space="preserve">
+    <value>Question</value>
+  </data>
+  <data name="Quick_Survey" xml:space="preserve">
+    <value>Quick Survey</value>
+  </data>
+  <data name="Reset_Password" xml:space="preserve">
+    <value>Reset Password</value>
+  </data>
+  <data name="Reseted_password_successfully" xml:space="preserve">
+    <value>Reseted password successfully.</value>
+  </data>
+  <data name="Retrieve_Password" xml:space="preserve">
+    <value>Retrieve Password</value>
+  </data>
+  <data name="Saudi_Community_Care" xml:space="preserve">
+    <value>Saudi Community Care</value>
+  </data>
+  <data name="Select_a_Lab_Test" xml:space="preserve">
+    <value>Select a Lab Test</value>
+  </data>
+  <data name="Select_a_Payment_Type" xml:space="preserve">
+    <value>Select a Payment Type</value>
+  </data>
+  <data name="Select_Payment_Method" xml:space="preserve">
+    <value>Select Payment Method</value>
+  </data>
+  <data name="Selected_Location" xml:space="preserve">
+    <value>Selected Location</value>
+  </data>
+  <data name="Send" xml:space="preserve">
+    <value>Send</value>
+  </data>
+  <data name="Sign_in" xml:space="preserve">
+    <value>Sign in</value>
+  </data>
+  <data name="Sign_Up" xml:space="preserve">
+    <value>Sign Up</value>
+  </data>
+  <data name="Sign_up_successfully" xml:space="preserve">
+    <value>Sign up successfully.</value>
+  </data>
+  <data name="Signing_in" xml:space="preserve">
+    <value>Signing in</value>
+  </data>
+  <data name="Skip" xml:space="preserve">
+    <value>Skip</value>
+  </data>
+  <data name="Skip_Survey" xml:space="preserve">
+    <value>Skip Survey</value>
+  </data>
+  <data name="Success" xml:space="preserve">
+    <value>Success</value>
+  </data>
+  <data name="Successfully_send_results_Recommend_Test" xml:space="preserve">
+    <value>Successfully send results.\nRecommend Test:</value>
+  </data>
+  <data name="You_will_recieve_the_order_confirmation_on_your_email" xml:space="preserve">
+    <value>Thank you for select Community Health Care.\nYou will recieve the order confirmation on your email.</value>
+  </data>
+  <data name="Time_and_Location" xml:space="preserve">
+    <value>Time and Location</value>
+  </data>
+  <data name="Total" xml:space="preserve">
+    <value>Total:</value>
+  </data>
+  <data name="Waiting" xml:space="preserve">
+    <value>Waiting...</value>
+  </data>
+  <data name="Warning" xml:space="preserve">
+    <value>Warning!</value>
+  </data>
+  <data name="We_just_sent_an_email_with_Pin_code" xml:space="preserve">
+    <value>We just sent an email with Pin code</value>
+  </data>
+  <data name="Welcome_to_Saudi_CommunityCare" xml:space="preserve">
+    <value>Welcome to Saudi Community Care</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="Accept" xml:space="preserve">
+    <value>Accept</value>
+  </data>
+  <data name="Community_Health_Care" xml:space="preserve">
+    <value>Community Health Care</value>
+  </data>
+</root>

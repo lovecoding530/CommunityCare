@@ -1,0 +1,8 @@
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.iOS\obj\iPhone\Debug\ibtool\_BundleResourceWithLogicalName.items
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.iOS\obj\iPhone\Debug\actool\_PartialAppManifest.items
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.iOS\obj\iPhone\Debug\actool\_BundleResourceWithLogicalName.items
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.iOS\obj\iPhone\Debug\coremlc\_PartialAppManifest.items
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.iOS\obj\iPhone\Debug\coremlc\_BundleResourceWithLogicalName.items
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.iOS\obj\iPhone\Debug\optimized\
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.iOS\obj\iPhone\Debug\CommunityCare.iOS.csprojResolveAssemblyReference.cache
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.iOS\obj\iPhone\Debug\CommunityCare.iOS.csproj.CoreCompileInputs.cache

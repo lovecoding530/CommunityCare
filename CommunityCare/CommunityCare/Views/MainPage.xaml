@@ -1,0 +1,27 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:CommunityCare"
+             x:Class="CommunityCare.MainPage"
+    		 xmlns:i18n="clr-namespace:CommunityCare;assembly=CommunityCare"
+             Title="{i18n:Translate Community_Health_Care}">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>10</OnPlatform.iOS>
+            <OnPlatform.Android>10</OnPlatform.Android>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout Padding="50, 20, 50, 20">
+            <Label x:Name="newLabTestLabel" Text="{i18n:Translate New_Lab_Test}" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="10"/>
+            <StackLayout  HorizontalOptions="FillAndExpand" Orientation="Horizontal" Margin="0, 0, 0, 30">
+                <Button Text="{i18n:Translate Quick_Survey}" Clicked="OnClickedQuickSurvey"  HorizontalOptions="FillAndExpand"/>
+                <Button Text="{i18n:Translate Skip_Survey}" Clicked="OnClickedSkipSurvey"  HorizontalOptions="FillAndExpand"/>
+            </StackLayout>
+            <Label Text="{i18n:Translate History}" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="10"/>
+            <Button Text="{i18n:Translate History_of_Your_Surveys}" Clicked="OnClickedAllSurveys" HorizontalOptions="FillAndExpand"/>
+            <Button Text="{i18n:Translate History_of_Your_Lab_Tests}" Clicked="OnClickedAllLabtests" HorizontalOptions="FillAndExpand"/>
+            <Button Text="{i18n:Translate Contact_Us}" Clicked="OnClickedContactUs" HorizontalOptions="FillAndExpand" Margin="0, 30"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

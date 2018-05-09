@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityCare.SignupPage"
+             xmlns:controls="clr-namespace:CommunityCare"
+    		 xmlns:i18n="clr-namespace:CommunityCare;assembly=CommunityCare"
+             Title="{i18n:Translate Community_Health_Care}">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>10</OnPlatform.iOS>
+            <OnPlatform.Android>10</OnPlatform.Android>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{i18n:Translate Sign_Up}" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="0, 20"/>
+            <StackLayout>
+                <Entry Placeholder="{i18n:Translate Email_Address}"  Keyboard="Email" x:Name="emailAddressEntry"/>
+                <Entry Placeholder="{i18n:Translate New_Password}" IsPassword="True" x:Name="newPasswordEntry"/>
+                <Entry Placeholder="{i18n:Translate Confirm_Password}" IsPassword="True" x:Name="confirmPasswordEntry"/>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                    <controls:CheckBox Text="{i18n:Translate Accept}" VerticalOptions="Center" IsChecked="False" x:Name="checkAcceped"/>
+                    <Button Text="{i18n:Translate Agreement}" BackgroundColor="Transparent" TextColor="Blue"/>
+                </StackLayout>
+                <Button Text="{i18n:Translate Sign_Up}" Clicked="OnSignupClicked"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

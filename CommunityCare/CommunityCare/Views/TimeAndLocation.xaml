@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityCare.TimeAndLocation"
+             xmlns:maps="clr-namespace:Xamarin.Forms.GoogleMaps;assembly=Xamarin.Forms.GoogleMaps"
+    		 xmlns:i18n="clr-namespace:CommunityCare;assembly=CommunityCare"
+             Title="{i18n:Translate Time_and_Location}">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>20</OnPlatform.iOS>
+            <OnPlatform.Android>20</OnPlatform.Android>
+        </OnPlatform>
+    </ContentPage.Padding>
+    <ContentPage.Content>
+        <StackLayout>
+            <Label Text="{i18n:Translate Edit_Lab_Test_Time_and_Location}" HorizontalOptions="CenterAndExpand" FontSize="Medium"/>
+            <StackLayout Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+                <DatePicker x:Name="datePicker"></DatePicker>
+                <TimePicker x:Name="timePicker"></TimePicker>
+            </StackLayout>
+            <maps:Map
+                x:Name="map"
+            />
+            <StackLayout Orientation="Horizontal" HorizontalOptions="Fill">
+                <Button Text="{i18n:Translate Confirm}" HorizontalOptions="FillAndExpand" Clicked="OnClickedConfirm"/>
+                <Button Text="{i18n:Translate Cancel}"  HorizontalOptions="FillAndExpand" Clicked="OnClickedCancel"/>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

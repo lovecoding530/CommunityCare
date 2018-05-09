@@ -1,0 +1,28 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CommunityCare.SurveyPage"
+    		 xmlns:i18n="clr-namespace:CommunityCare;assembly=CommunityCare"
+             Title="{i18n:Translate Community_Health_Care}">
+    <ContentPage.Padding>
+        <OnPlatform x:TypeArguments="Thickness">
+            <OnPlatform.iOS>10</OnPlatform.iOS>
+            <OnPlatform.Android>10</OnPlatform.Android>
+        </OnPlatform>
+    </ContentPage.Padding>
+
+    <ContentPage.Content>
+        <ScrollView x:Name="scrollView">
+            <StackLayout>
+                <Label Text="{i18n:Translate Main_Survey}" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="0, 20"/>
+                <StackLayout x:Name="surveyStack">
+                    
+                </StackLayout>
+                <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
+                    <Button Text="{i18n:Translate Finish}" Clicked="OnFinishClicked"/>
+                    <Button Text="{i18n:Translate Skip}" />
+                </StackLayout>
+            </StackLayout>
+        </ScrollView>
+    </ContentPage.Content>
+</ContentPage>
