@@ -13,6 +13,8 @@ using ImageButton;
 using CommunityCare.Models;
 using Plugin.Hud;
 using Plugin.Hud.Abstractions;
+using CommunityCare.Resx;
+using System.Globalization;
 
 namespace CommunityCare
 {
@@ -20,7 +22,7 @@ namespace CommunityCare
     public partial class SurveyHistoryPage : ContentPage
     {
         ObservableCollection<Survey> surveys = new ObservableCollection<Survey>();
-
+        string locale = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
         public SurveyHistoryPage()
         {
             InitializeComponent();
@@ -37,7 +39,7 @@ namespace CommunityCare
 
                 listView.SelectedItem = null; // de-select the row
 
-                CrossHud.Current.Show(message: "Getting tests", mask: MaskType.Clear);
+                CrossHud.Current.Show(message: AppResource.Getting_tests, mask: MaskType.Clear);
                 var client = new HttpClient();
                 var answersString = await client.GetStringAsync(String.Format(Contents.GetSurveyAnswer, item.enrollID));
                 CrossHud.Current.Dismiss();
@@ -70,13 +72,15 @@ namespace CommunityCare
                     var qID = question.Key;
                     var questionObject = question.Value;
                     var answers = questionAnswers[qID];
-                    var title = questionObject["etitle"].ToString();
+                    var titleKey = (locale == "en") ? "etitle" : "atitle";
+                    var title = questionObject[titleKey].ToString();
                     resultStr += String.Format("Q{0}: {1} \n", qIndex + 1, title);
 
                     var aIndex = 0;
                     foreach (var answerIndex in answers)
                     {
-                        var answerKey = "choice" + (answerIndex + 1) + "e";
+                        var localePre = (locale == "en") ? "e" : "a";
+                        var answerKey = "choice" + (answerIndex + 1) + localePre;
                         var answerStr = questionObject[answerKey].ToString();
                         resultStr += String.Format("A{0}: {1} \n", aIndex + 1, answerStr);
                         aIndex++;
@@ -89,7 +93,7 @@ namespace CommunityCare
 
             var userId = Application.Current.Properties["clientID"] as String;
 
-            CrossHud.Current.Show(message: "Getting tests", mask: MaskType.Clear);
+            CrossHud.Current.Show(message: AppResource.Getting_tests, mask: MaskType.Clear);
             var httpClient = new HttpClient();
             var jsonString = await httpClient.GetStringAsync(String.Format(Contents.GetAllClientSurvey, userId));
             CrossHud.Current.Dismiss();

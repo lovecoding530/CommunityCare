@@ -8,6 +8,7 @@ using System.Net.Http;
 using Newtonsoft.Json.Linq;
 using Plugin.Hud;
 using Plugin.Hud.Abstractions;
+using CommunityCare.Resx;
 
 namespace CommunityCare
 {
@@ -25,7 +26,7 @@ namespace CommunityCare
 
         protected async override void OnAppearing()
         {
-            CrossHud.Current.Show(message: "Getting info...", mask: MaskType.Clear);
+            CrossHud.Current.Show(message: AppResource.Getting_info, mask: MaskType.Clear);
             var httpClient = new HttpClient();
             var jsonString = await httpClient.GetStringAsync(Contents.GetContactInfo);
             CrossHud.Current.Dismiss();
@@ -45,7 +46,7 @@ namespace CommunityCare
             }
             else
             {
-                await DisplayAlert("Warning!", "No info", "OK");
+                await DisplayAlert(AppResource.Warning, "No info", "OK");
             }
         }
 
@@ -55,19 +56,19 @@ namespace CommunityCare
             var message = messageEditor.Text;
             if (!String.IsNullOrEmpty(message))
             {
-                CrossHud.Current.Show(message: "Waiting...", mask: MaskType.Clear);
+                CrossHud.Current.Show(message: AppResource.Waiting, mask: MaskType.Clear);
                 var httpClient = new HttpClient();
                 var res = await httpClient.PostAsync(String.Format(Contents.PostContactUS, userId, message), null);
                 CrossHud.Current.Dismiss();
                 if (res.IsSuccessStatusCode)
                 {
-                    await DisplayAlert("Success!", "We just sent contact message", "OK");
+                    await DisplayAlert(AppResource.Success, "We just sent contact message", "OK");
                     messageEditor.Text = "";
                 }
             }
             else
             {
-                await DisplayAlert("Warning!", "Enter correctly.", "OK");
+                await DisplayAlert(AppResource.Waiting, AppResource.Enter_correctly, "OK");
             }
 
         }

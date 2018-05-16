@@ -29,7 +29,7 @@ namespace CommunityCare
             var password = passwordEntry.Text;
             if(!String.IsNullOrEmpty(email) && !String.IsNullOrEmpty(password))
             {
-                CrossHud.Current.Show(message: "Signing in", mask: MaskType.Clear);
+                CrossHud.Current.Show(message: AppResource.Signing_in, mask: MaskType.Clear);
                 var httpClient = new HttpClient();
                 var jsonString = await httpClient.GetStringAsync(String.Format(Contents.LoginUrl, email, password));
                 CrossHud.Current.Dismiss();
@@ -50,7 +50,7 @@ namespace CommunityCare
                         var np = new NavigationPage(new MainPage());
                         np.BarBackgroundColor = Color.LightGray;
                         np.BarTextColor = Color.Black;
-                        np.Title = "Community Health Care";
+                        np.Title = AppResource.Community_Health_Care;
                         App.Current.MainPage = np;
 
                     }
@@ -66,7 +66,7 @@ namespace CommunityCare
                         var np = new NavigationPage(new StaffOrdersPage());
                         np.BarBackgroundColor = Color.LightGray;
                         np.BarTextColor = Color.Black;
-                        np.Title = "Community Health Care";
+                        np.Title = AppResource.Community_Health_Care;
                         App.Current.MainPage = np;
 
                     }
@@ -74,12 +74,12 @@ namespace CommunityCare
                 }
                 else
                 {
-                    await DisplayAlert("Warning!", "Invalid email or password", "OK");
+                    await DisplayAlert(AppResource.Warning, "Invalid email or password", "OK");
                 }
             }
             else
             {
-                await DisplayAlert("Warning!", "Enter correctly.", "OK");
+                await DisplayAlert(AppResource.Warning, AppResource.Enter_correctly, "OK");
             }
         }
 

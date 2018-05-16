@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +18,8 @@ namespace CommunityCare
 
         async void OnClickedQuickSurvey(object sender, EventArgs args)
         {
+            //var cultureInfo = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+            //await DisplayAlert("ComCare", cultureInfo, "OK");
             await Navigation.PushAsync(new SurveyPage());
         }
 

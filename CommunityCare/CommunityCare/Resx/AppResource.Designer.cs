@@ -259,6 +259,15 @@ namespace CommunityCare.Resx {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to Getting Surveies.
+        /// </summary>
+        public static string Getting_Surveies {
+            get {
+                return ResourceManager.GetString("Getting_Surveies", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Getting tests.
         /// </summary>
         public static string Getting_tests {

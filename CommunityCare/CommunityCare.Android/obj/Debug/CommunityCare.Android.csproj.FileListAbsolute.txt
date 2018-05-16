@@ -119,3 +119,13 @@ E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\bin\Debug\ar\Commun
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\bin\Debug\com.saudihealthcare.CommunityCare.apk
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\bin\Debug\com.saudihealthcare.CommunityCare-Signed.apk
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\android\bin\com.saudihealthcare.CommunityCare.apk
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\bin\Debug\CommunityCare.Android.dll
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\linksrc\CommunityCare.pdb
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\linksrc\CommunityCare.Android.dll.mdb
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\linksrc\FormsViewGroup.dll.mdb
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\linksrc\ImageButton.Abstractions.dll.mdb
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\linksrc\ImageButton.Android.dll.mdb
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\linksrc\Plugin.Hud.dll.mdb
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\linksrc\Xamarin.Forms.Core.dll.mdb
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\linksrc\Xamarin.Forms.Platform.Android.dll.mdb
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\linksrc\Xamarin.Forms.Xaml.dll.mdb

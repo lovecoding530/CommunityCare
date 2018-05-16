@@ -20,7 +20,7 @@
                 </StackLayout>
                 <StackLayout HorizontalOptions="Center" Orientation="Horizontal">
                     <Button Text="{i18n:Translate Finish}" Clicked="OnFinishClicked"/>
-                    <Button Text="{i18n:Translate Skip}" />
+                    <Button Text="{i18n:Translate Skip}" Clicked="OnSkipClicked" />
                 </StackLayout>
             </StackLayout>
         </ScrollView>

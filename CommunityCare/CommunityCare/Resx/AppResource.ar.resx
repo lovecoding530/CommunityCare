@@ -327,4 +327,7 @@
   <data name="Community_Health_Care" xml:space="preserve">
     <value>الرعاية الصحية المجتمعية</value>
   </data>
+  <data name="Getting_Surveies" xml:space="preserve">
+    <value>الحصول على استطلاعات</value>
+  </data>
 </root>

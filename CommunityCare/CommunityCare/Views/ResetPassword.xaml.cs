@@ -9,6 +9,7 @@ using Xamarin.Forms.Xaml;
 using System.Net.Http;
 using Plugin.Hud;
 using Plugin.Hud.Abstractions;
+using CommunityCare.Resx;
 
 namespace CommunityCare
 {
@@ -34,7 +35,7 @@ namespace CommunityCare
                 newPassword == confirmPassword)
             {
 
-                CrossHud.Current.Show(message: "Waiting...", mask: MaskType.Clear);
+                CrossHud.Current.Show(message: AppResource.Warning, mask: MaskType.Clear);
                 var resetUrl = String.Format(Contents.ResetPasswordUrl, this.email, newPassword, pinNumber);
                 Console.WriteLine(resetUrl);
                 var httpClient = new HttpClient();
@@ -49,7 +50,7 @@ namespace CommunityCare
                     var output = Convert.ToInt32(outputStr);
                     if (output > 0)
                     {
-                        await DisplayAlert("ComCare!", "Reseted password successfully.", "OK");
+                        await DisplayAlert(AppResource.CommCare, AppResource.Reseted_password_successfully, "OK");
                         await Navigation.PopToRootAsync();
                     }
                 }
@@ -57,7 +58,7 @@ namespace CommunityCare
             }
             else
             {
-                await DisplayAlert("Warning!", "Enter correctly.", "OK");
+                await DisplayAlert(AppResource.Warning, AppResource.Enter_correctly, "OK");
             }
         }
     }

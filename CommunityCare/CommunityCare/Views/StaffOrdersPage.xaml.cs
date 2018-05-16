@@ -13,6 +13,7 @@ using ImageButton;
 using CommunityCare.Models;
 using Plugin.Hud;
 using Plugin.Hud.Abstractions;
+using CommunityCare.Resx;
 
 namespace CommunityCare
 {
@@ -45,7 +46,7 @@ namespace CommunityCare
 
             var staffID = Application.Current.Properties["staffID"] as String;
 
-            CrossHud.Current.Show(message: "Getting tests", mask: MaskType.Clear);
+            CrossHud.Current.Show(message: AppResource.Getting_tests, mask: MaskType.Clear);
             var httpClient = new HttpClient();
             var jsonString = await httpClient.GetStringAsync(String.Format(Contents.GetAllStaffOrders, staffID));
             CrossHud.Current.Dismiss();

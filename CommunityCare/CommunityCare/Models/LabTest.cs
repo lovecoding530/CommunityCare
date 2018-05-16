@@ -1,12 +1,15 @@
 ﻿using Newtonsoft.Json.Linq;
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Text;
 
 namespace CommunityCare.Models
 {
     public class LabTest
     {
+        string locale = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
+
         public LabTest(String id, String name, Double price)
         {
             setFields(id, name, price);
@@ -14,8 +17,9 @@ namespace CommunityCare.Models
 
         public LabTest(JToken jToken)
         {
+            var localePre = (locale == "en") ? "e" : "a";
             var testID = jToken["btID"].ToString();
-            var testName = jToken["ename"].ToString();
+            var testName = jToken[localePre+"name"].ToString();
             var priceStr = jToken["Price"].ToString();
             var price = Convert.ToDouble(priceStr);
             setFields(testID, testName, price);

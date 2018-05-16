@@ -12,6 +12,7 @@ using System.Net.Http;
 using Newtonsoft.Json.Linq;
 using Plugin.Hud;
 using Plugin.Hud.Abstractions;
+using CommunityCare.Resx;
 
 namespace CommunityCare
 {
@@ -86,7 +87,7 @@ namespace CommunityCare
                                         surveyRecommedation);
             }
 
-            CrossHud.Current.Show(message: "Waiting...", mask: MaskType.Clear);
+            CrossHud.Current.Show(message: AppResource.Waiting, mask: MaskType.Clear);
             var httpClient = new HttpClient();
             var res = await httpClient.PostAsync(postUrl, null);
             CrossHud.Current.Dismiss();
@@ -96,7 +97,7 @@ namespace CommunityCare
                 var outputStr = await res.Content.ReadAsStringAsync();
                 if(outputStr == "true")
                 {
-                    await DisplayAlert("Success!", "Thank you for select Community Health Care.\nYou will recieve the order confirmation on your email.", "OK");
+                    await DisplayAlert(AppResource.Success, AppResource.You_will_recieve_the_order_confirmation_on_your_email, "OK");
                     await Navigation.PopToRootAsync();
                 }
             }
@@ -104,7 +105,7 @@ namespace CommunityCare
 
         async void OnClickedCancel(object sender, EventArgs args)
         {
-            var answer = await DisplayAlert("ComCare!", "Are you sure to cancel the Lab Test?", "Yes", "No");
+            var answer = await DisplayAlert(AppResource.CommCare, AppResource.Are_you_sure_to_cancel_the_Lab_Test, "Yes", "No");
             if (answer)
             {
                 await Navigation.PopAsync();

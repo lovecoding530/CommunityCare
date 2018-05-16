@@ -13,6 +13,8 @@ using ImageButton;
 using CommunityCare.Models;
 using Plugin.Hud;
 using Plugin.Hud.Abstractions;
+using CommunityCare.Resx;
+using System.Globalization;
 
 namespace CommunityCare
 {
@@ -21,6 +23,8 @@ namespace CommunityCare
     {
         ObservableCollection<LabTest> labTests = new ObservableCollection<LabTest>();
         ObservableCollection<LabTest> selectedLabTests = new ObservableCollection<LabTest>();
+
+        string locale = CultureInfo.CurrentCulture.TwoLetterISOLanguageName;
 
         public ManualLabTest()
         {
@@ -36,7 +40,7 @@ namespace CommunityCare
                 // do something with e.SelectedItem
                 ((ListView)sender).SelectedItem = null; // de-select the row
             };
-            CrossHud.Current.Show(message: "Getting tests", mask: MaskType.Clear);
+            CrossHud.Current.Show(message: AppResource.Getting_tests, mask: MaskType.Clear);
             var httpClient = new HttpClient();
             var jsonString = await httpClient.GetStringAsync(Contents.GetBloodTestUrl);
             CrossHud.Current.Dismiss();
@@ -46,8 +50,9 @@ namespace CommunityCare
 
             foreach (var jsonObject in jsonArray)
             {
+                var localePre = (locale == "en") ? "e" : "a";
                 var testID = jsonObject["btID"].ToString();
-                var testName = jsonObject["ename"].ToString();
+                var testName = jsonObject[localePre+"name"].ToString();
                 var priceStr = jsonObject["Price"].ToString();
                 var price = Convert.ToDouble(priceStr);
                 labTests.Add(new LabTest(testID, testName, price));
@@ -59,13 +64,13 @@ namespace CommunityCare
         {
             if (labTestPicker.SelectedIndex < 0)
             {
-                await DisplayAlert("ComCare!", "Select a Lab Test", "OK");
+                await DisplayAlert(AppResource.CommCare, AppResource.Select_a_Lab_Test, "OK");
                 return;
             }
             var item = labTests[labTestPicker.SelectedIndex];
             if (selectedLabTests.Contains(item))
             {
-                await DisplayAlert("ComCare!", "Aleady Added", "OK");
+                await DisplayAlert(AppResource.CommCare, AppResource.Aleady_Added, "OK");
             }
             else
             {
@@ -99,7 +104,7 @@ namespace CommunityCare
         {
             if(selectedLabTests.Count ==  0)
             {
-                await DisplayAlert("ComCare!", "Please add a lab test", "OK");
+                await DisplayAlert(AppResource.CommCare, AppResource.Please_add_a_lab_test, "OK");
                 return;
             }
             var selectedItemsStr = "";
@@ -115,7 +120,7 @@ namespace CommunityCare
         }
         async void OnClickedCancel(object sender, EventArgs args)
         {
-            var answer = await DisplayAlert("ComCare!", "Are you sure to cancel the Lab Test?", "Yes", "No");
+            var answer = await DisplayAlert(AppResource.CommCare, AppResource.Are_you_sure_to_cancel_the_Lab_Test, "Yes", "No");
             if (answer)
             {
                 await Navigation.PopAsync();

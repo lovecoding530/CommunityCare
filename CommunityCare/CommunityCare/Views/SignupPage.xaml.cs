@@ -10,6 +10,7 @@ using System.Net.Http;
 using Plugin.Geolocator;
 using Plugin.Hud;
 using Plugin.Hud.Abstractions;
+using CommunityCare.Resx;
 
 namespace CommunityCare
 {
@@ -50,14 +51,14 @@ namespace CommunityCare
 
                 if (res.IsSuccessStatusCode)
                 {
-                    await DisplayAlert("Welcome!", "Sign up successfully.", "OK");
+                    await DisplayAlert(AppResource.Sign_Up, AppResource.Sign_up_successfully, "OK");
                     await Navigation.PopAsync();
                 }
 
             }
             else
             {
-                await DisplayAlert("Warning!", "Enter correctly.", "OK");
+                await DisplayAlert(AppResource.Warning, AppResource.Enter_correctly, "OK");
             }
         }
     }

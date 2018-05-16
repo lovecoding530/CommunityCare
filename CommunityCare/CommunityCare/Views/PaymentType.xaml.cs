@@ -1,4 +1,5 @@
-﻿using System;
+﻿using CommunityCare.Resx;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -30,7 +31,7 @@ namespace CommunityCare
         {
             if (typesPicker.SelectedIndex < 0)
             {
-                await DisplayAlert("ComCare!", "Please select a payment type", "OK");
+                await DisplayAlert(AppResource.CommCare, AppResource.Please_select_a_payment_type, "OK");
                 return;
             }
 
@@ -45,7 +46,7 @@ namespace CommunityCare
 
         async void OnClickedCancel(object sender, EventArgs args)
         {
-            var answer = await DisplayAlert("ComCare!", "Are you sure to cancel the Lab Test?", "Yes", "No");
+            var answer = await DisplayAlert(AppResource.CommCare, AppResource.Are_you_sure_to_cancel_the_Lab_Test, "Yes", "No");
             if (answer)
             {
                 await Navigation.PopAsync();
