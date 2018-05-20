@@ -14,7 +14,7 @@
     <ContentPage.Content>
         <ScrollView x:Name="scrollView">
             <StackLayout>
-                <Label Text="{i18n:Translate Main_Survey}" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="0, 20"/>
+                <Label Text="{i18n:Translate Main_Survey}" HorizontalOptions="CenterAndExpand" FontSize="24" Margin="0, 20"/>
                 <StackLayout x:Name="surveyStack">
                     
                 </StackLayout>

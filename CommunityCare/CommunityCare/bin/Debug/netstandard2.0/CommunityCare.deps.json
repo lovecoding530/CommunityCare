@@ -19,6 +19,11 @@
         },
         "runtime": {
           "CommunityCare.dll": {}
+        },
+        "resources": {
+          "ar/CommunityCare.resources.dll": {
+            "locale": "ar"
+          }
         }
       },
       "Microsoft.NETCore.Platforms/1.1.0": {},

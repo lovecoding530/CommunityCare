@@ -1,7 +1,10 @@
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\bin\Debug\CommunityCare.Android.dll
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\bin\Debug\CommunityCare.Android.pdb
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\bin\Debug\com.saudihealthcare.CommunityCare.apk
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\bin\Debug\com.saudihealthcare.CommunityCare-Signed.apk
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\bin\Debug\CommunityCare.dll
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\bin\Debug\CommunityCare.pdb
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\bin\Debug\ar\CommunityCare.resources.dll
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\CommunityCare.Android.csprojResolveAssemblyReference.cache
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Basement.dll
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\XbdMerge\Xamarin.GooglePlayServices.Tasks.dll
@@ -11,6 +14,7 @@ E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\Community
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\CommunityCare.Android.csproj.CopyComplete
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\CommunityCare.Android.dll
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\CommunityCare.Android.pdb
+E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\android\bin\com.saudihealthcare.CommunityCare.apk
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\res\drawable\icon.png
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\res\drawable-hdpi\icon.png
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\res\drawable-xhdpi\icon.png
@@ -115,12 +119,7 @@ E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\android\a
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\android\assets\System.Web.Services.pdb
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\android\assets\System.Xml.Linq.pdb
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\android\assets\System.Xml.pdb
-E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\bin\Debug\ar\CommunityCare.resources.dll
-E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\bin\Debug\com.saudihealthcare.CommunityCare.apk
-E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\bin\Debug\com.saudihealthcare.CommunityCare-Signed.apk
-E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\android\bin\com.saudihealthcare.CommunityCare.apk
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\bin\Debug\CommunityCare.Android.dll
-E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\linksrc\CommunityCare.pdb
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\linksrc\CommunityCare.Android.dll.mdb
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\linksrc\FormsViewGroup.dll.mdb
 E:\Xamarin\CommunityCare\CommunityCare\CommunityCare.Android\obj\Debug\linksrc\ImageButton.Abstractions.dll.mdb

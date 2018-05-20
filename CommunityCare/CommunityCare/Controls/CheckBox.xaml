@@ -4,8 +4,8 @@
              x:Class="CommunityCare.CheckBox">
 
     <StackLayout Orientation="Horizontal" Spacing="5">
-        <Image x:Name="box" WidthRequest="25" HeightRequest="25" VerticalOptions="Center"/>
-        <Label x:Name="textLabel" VerticalOptions="Center"/>
+        <Image x:Name="box" WidthRequest="20" HeightRequest="20" VerticalOptions="Center"/>
+        <Label x:Name="textLabel" FontSize="18" VerticalTextAlignment="Center"/>
     </StackLayout>
 
     <ContentView.GestureRecognizers>

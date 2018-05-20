@@ -13,7 +13,7 @@
     
     <ContentPage.Content>
         <StackLayout>
-            <Label Text="{i18n:Translate Login}" x:Name="loginLabel" HorizontalOptions="CenterAndExpand" FontSize="Medium" Margin="20"/>
+            <Label Text="{i18n:Translate Login}" x:Name="loginLabel" HorizontalOptions="CenterAndExpand" FontSize="24" Margin="20"/>
             <StackLayout  VerticalOptions="FillAndExpand">
                 <Entry Placeholder="{i18n:Translate Email_Address}" Keyboard="Email" x:Name="emailAddressEntry"/>
                 <Entry Placeholder="{i18n:Translate Password}" IsPassword="True" x:Name="passwordEntry"/>

@@ -37,9 +37,10 @@ namespace CommunityCare
             var jsonArray = JArray.Parse(jsonString);
 
             foreach(var jsonObject in jsonArray){
+                var questionStack = new StackLayout();
                 var titleKey = (locale == "en") ? "etitle" : "atitle";
                 var title = jsonObject[titleKey].ToString();
-                surveyStack.Children.Add(new Label { Text = title });
+                questionStack.Children.Add(new Label { Text = title, FontSize = 20 });
 
                 var qId = jsonObject["qID"].ToString();
                 var qType = jsonObject["qType"].ToString();
@@ -61,7 +62,7 @@ namespace CommunityCare
                     radioGroup.ItemsSource = answerList;
                     radioGroup.SelectedIndexes = new List<int>() { 0 };
 
-                    surveyStack.Children.Add(radioGroup);
+                    questionStack.Children.Add(radioGroup);
                 }
                 else
                 {
@@ -81,8 +82,9 @@ namespace CommunityCare
                     radioGroup.ItemsSource = answerList;
                     radioGroup.SelectedIndexes = new List<int>();
 
-                    surveyStack.Children.Add(radioGroup);
+                    questionStack.Children.Add(radioGroup);
                 }
+                surveyStack.Children.Add(new Frame { Content = questionStack });
             }
         }
 
